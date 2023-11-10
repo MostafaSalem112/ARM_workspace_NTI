@@ -1,0 +1,39 @@
+<<<<<<< HEAD
+19:48:26 **** Incremental Build of configuration Debug for project 1-ARM_Drivers ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "1-ARM_Drivers.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4355	    176	    412	   4943	   134f	1-ARM_Drivers.elf
+Finished building: 1-ARM_Drivers.siz
+=======
+09:06:43 **** Clean-only build of configuration Debug for project ARM_drivers ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f103c8tx.d ./Startup/startup_stm32f103c8tx.o
+rm -rf ./Src/GPIO_program.cyclo ./Src/GPIO_program.d ./Src/GPIO_program.o ./Src/GPIO_program.su ./Src/NVIC_program.cyclo ./Src/NVIC_program.d ./Src/NVIC_program.o ./Src/NVIC_program.su ./Src/RCC_program.cyclo ./Src/RCC_program.d ./Src/RCC_program.o ./Src/RCC_program.su ./Src/SysTik_program.cyclo ./Src/SysTik_program.d ./Src/SysTik_program.o ./Src/SysTik_program.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ARM_drivers.elf ARM_drivers.list ARM_drivers.map default.size.stdout
+ 
+09:06:44 **** Build of configuration Debug for project ARM_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/DMA_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/DMA_program.d" -MT"Src/DMA_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/DMA_program.o"
+arm-none-eabi-gcc "../Src/GPIO_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/GPIO_program.d" -MT"Src/GPIO_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/GPIO_program.o"
+arm-none-eabi-gcc "../Src/NVIC_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NVIC_program.d" -MT"Src/NVIC_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NVIC_program.o"
+arm-none-eabi-gcc "../Src/RCC_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/RCC_program.d" -MT"Src/RCC_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/RCC_program.o"
+arm-none-eabi-gcc "../Src/SysTik_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/SysTik_program.d" -MT"Src/SysTik_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/SysTik_program.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "ARM_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\embedded_nti\ARM_workspace\C_workspace\ARM_drivers\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ARM_drivers.elf
+ 
+arm-none-eabi-size   ARM_drivers.elf 
+arm-none-eabi-objdump -h -S  ARM_drivers.elf  > "ARM_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   3304	      8	   1576	   4888	   1318	ARM_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: ARM_drivers.list
+ 
+arm-none-eabi-objcopy -O ihex ARM_drivers.elf ARM_drivers.hex
+>>>>>>> a408299 (first commit)
+ 

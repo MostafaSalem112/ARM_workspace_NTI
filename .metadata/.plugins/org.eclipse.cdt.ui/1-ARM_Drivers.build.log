@@ -1,0 +1,11 @@
+19:48:26 **** Incremental Build of configuration Debug for project 1-ARM_Drivers ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "1-ARM_Drivers.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4355	    176	    412	   4943	   134f	1-ARM_Drivers.elf
+Finished building: 1-ARM_Drivers.siz
+ 
+
+19:48:26 Build Finished (took 719ms)
+

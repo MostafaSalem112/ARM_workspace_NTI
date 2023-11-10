@@ -1,0 +1,130 @@
+/*
+ * NVIC_interface.h
+ *
+ *  Created on: Nov 6, 2023
+ *      Author: Mostafa_Salem
+ */
+
+#ifndef NVIC_INTERFACE_H_
+#define NVIC_INTERFACE_H_
+
+typedef enum{
+	GROUP_16_SUB_0=3,
+	GROUP_8_SUB_2,
+	GROUP_4_SUB_4,
+	GROUP_2_SUB_8,
+	GROUP_0_SUB_16,
+}PRIGROUP_t;
+
+typedef enum{
+	GROUP_0,
+	GROUP_1,
+	GROUP_2,
+	GROUP_3,
+	GROUP_4,
+	GROUP_5,
+	GROUP_6,
+	GROUP_7,
+	GROUP_8,
+	GROUP_9,
+	GROUP_10,
+	GROUP_11,
+	GROUP_12,
+	GROUP_13,
+	GROUP_14,
+	GROUP_15,
+}GROUPS_t;
+
+typedef enum{
+	SUBGROUP_0,
+	SUBGROUP_1,
+	SUBGROUP_2,
+	SUBGROUP_3,
+	SUBGROUP_4,
+	SUBGROUP_5,
+	SUBGROUP_6,
+	SUBGROUP_7,
+	SUBGROUP_8,
+	SUBGROUP_9,
+	SUBGROUP_10,
+	SUBGROUP_11,
+	SUBGROUP_12,
+	SUBGROUP_13,
+	SUBGROUP_14,
+	SUBGROUP_15,
+}SUBGROUPS_t;
+
+typedef enum{
+	NVIC_WWDG,
+	NVIC_PVD,
+	NVIC_TAMPER,
+	NVIC_RTC,
+	NVIC_FLASH,
+	NVIC_RCC,
+	NVIC_EXTI0,
+	NVIC_EXTI1,
+	NVIC_EXTI2,
+	NVIC_EXTI3,
+	NVIC_EXTI4,
+	NVIC_DMA1_Channel1,
+	NVIC_DMA1_Channel2,
+	NVIC_DMA1_Channel3,
+	NVIC_DMA1_Channel4,
+	NVIC_DMA1_Channel5,
+	NVIC_DMA1_Channel6,
+	NVIC_DMA1_Channel7,
+	NVIC_ADC1_2,
+	NVIC_CAN1_TX,
+	NVIC_CAN1_RX0,
+	NVIC_CAN1_RX1,
+	NVIC_CAN1_SCE,
+	NVIC_EXTI9_5,
+	NVIC_TIM1_BRK,
+	NVIC_TIM1_UP,
+	NVIC_TIM1_TRG_COM,
+	NVIC_TIM1_CC,
+	NVIC_TIM2,
+	NVIC_TIM3,
+	NVIC_TIM4,
+	NVIC_I2C1_EV,
+	NVIC_I2C1_ER,
+	NVIC_I2C2_EV,
+	NVIC_I2C2_ER,
+	NVIC_SPI1,
+	NVIC_SPI2,
+	NVIC_USART1,
+	NVIC_USART2,
+	NVIC_USART3,
+	NVIC_EXTI15_10,
+	NVIC_RTCAlarm,
+	NVIC_OTG_FS_WKUP,
+	NVIC_TIM5 = 50,
+	NVIC_SPI3,
+	NVIC_UART4,
+	NVIC_UART5,
+	NVIC_TIM6,
+	NVIC_TIM7,
+	NVIC_DMA2_Channel1,
+	NVIC_DMA2_Channel2,
+	NVIC_DMA2_Channel3,
+	NVIC_DMA2_Channel4,
+	NVIC_DMA2_Channel5,
+	NVIC_ETH,
+	NVIC_ETH_WKUP,
+	NVIC_CAN2_TX,
+	NVIC_CAN2_RX0,
+	NVIC_CAN2_RX1,
+	NVIC_CAN2_SCE,
+	NVIC_OTG_FS,
+}INTERRUPT_POS_t;
+
+void MNVIC_vEnableInterrupt(INTERRUPT_POS_t A_InterruptPosition);
+void MNVIC_vDisableInterrupt(INTERRUPT_POS_t A_InterruptPosition);
+void MNVIC_vSetPendingFlag(INTERRUPT_POS_t A_InterruptPosition);
+void MNVIC_vClearPendingFlag(INTERRUPT_POS_t A_InterruptPosition);
+u8 	 MNVIC_u8GetPendingFlag(INTERRUPT_POS_t A_InterruptPosition);
+u8	 MNVIC_u8GetActiveFlag(INTERRUPT_POS_t A_InterruptPosition);
+void MNVIC_vSetPriorityGroups(PRIGROUP_t PriGroup);
+void MNVIC_vSetInterruptPriority(INTERRUPT_POS_t A_InterruptPosition,GROUPS_t A_GroupNo,SUBGROUPS_t A_SubGroupNo);
+
+#endif /* NVIC_INTERFACE_H_ */

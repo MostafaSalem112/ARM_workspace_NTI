@@ -1,0 +1,8 @@
+../Src/NVIC_program.c:16:6:MNVIC_vEnableInterrupt	16	static
+../Src/NVIC_program.c:21:6:MNVIC_vDisableInterrupt	16	static
+../Src/NVIC_program.c:26:6:MNVIC_vSetPendingFlag	16	static
+../Src/NVIC_program.c:31:6:MNVIC_vClearPendingFlag	16	static
+../Src/NVIC_program.c:36:6:MNVIC_u8GetPendingFlag	16	static
+../Src/NVIC_program.c:41:5:MNVIC_u8GetActiveFlag	16	static
+../Src/NVIC_program.c:46:6:MNVIC_vSetPriorityGroups	24	static
+../Src/NVIC_program.c:54:6:MNVIC_vSetInterruptPriority	16	static

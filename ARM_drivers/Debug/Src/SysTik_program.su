@@ -1,0 +1,8 @@
+../Src/SysTik_program.c:16:6:SysTik_voidInitialize	4	static
+../Src/SysTik_program.c:23:6:SysTik_voidDelay_ms	32	static
+../Src/SysTik_program.c:50:5:SysTik_u32GetElapsedTime_ms	32	static
+../Src/SysTik_program.c:76:5:SysTik_u32GetRemainingTime_ms	24	static
+../Src/SysTik_program.c:98:6:SysTik_voidSetIntervalms_Single	32	static
+../Src/SysTik_program.c:125:6:SysTik_voidSetIntervalms_Periodic	32	static
+../Src/SysTik_program.c:152:6:SysTik_voidStopTimer	4	static
+../Src/SysTik_program.c:156:6:SysTick_Handler	8	static

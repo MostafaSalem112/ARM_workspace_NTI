@@ -1,0 +1,3 @@
+../Src/RCC_program.c:8:6:RCC_voidInitialize	3
+../Src/RCC_program.c:41:6:RCC_vEnablePeripheralClock	5
+../Src/RCC_program.c:56:6:RCC_vDisablePeripheralClock	5
